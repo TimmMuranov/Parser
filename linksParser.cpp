@@ -34,7 +34,7 @@ int main(){
         flag = 0;
         //cout << x - 1 << endl;
         if(flagWrite){
-          linkList += "\n";
+          linkList += " ";
           flagWrite = 0;
         }
         else flagWrite = 0;
