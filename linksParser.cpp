@@ -7,7 +7,7 @@ using namespace std;
 int main(){
   string file;
   string fileName;
-  cout << "Введите имя файла\n";
+  cout << "Введите имя файла...\n";
   cin >> fileName;
     ifstream in(fileName);
     if (in.is_open()){
@@ -17,20 +17,35 @@ int main(){
         }
     }
   in.close();
-  cout <<"Парсинг ссылок начинается...\n"
-  cout << getLinks(file) << endl;
-}
+  //cout << "Исходный файл: " << endl << file << endl;
 
-string getLinks(string f){
+/////////////////////////////////////////////////
+  cout <<"Парсинг ссылок начинается...\n";
   string linkList = "";
-  int fileSize = f.length();
-  for(int x=0; x<fileSize; ++x){
-    if (f[x] == "\""){
-      int end = f.find("\"", x+1);
-      if(f.substr(x+1, 4) == "http"){
-        linkList += f.substr(x+1, end);
+  bool flag = 0;
+  bool flagWrite = 0;
+  for(int x=0; x<file.length(); ++x){
+    if(file[x] == '"'){
+      if(!flag){
+        flag = 1;
+        //cout << x + 1 << " ";
       }
-    x += (end - (x+1)) + 1;
+      else{
+        flag = 0;
+        //cout << x - 1 << endl;
+        if(flagWrite){
+          linkList += "\n";
+          flagWrite = 0;
+        }
+        else flagWrite = 0;
+      }
+    }
+    if(file.substr(x, 4) == "http") flagWrite = 1;
+    if(flag && flagWrite){
+      if(file[x] != '"'){
+        linkList += file[x];
+      }
     }
   }
+  cout << linkList;
 }
