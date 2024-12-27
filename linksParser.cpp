@@ -17,17 +17,18 @@ int main(){
         }
     }
   in.close();
-  cout << file << endl;
+  cout <<"Парсинг ссылок начинается...\n"
+  cout << getLinks(file) << endl;
 }
 
-string getLinks(string file){
+string getLinks(string f){
   string linkList = "";
-  int fileSize = file.length();
+  int fileSize = f.length();
   for(int x=0; x<fileSize; ++x){
-    if (file[x] == "\""){
-      int end = file.find("\"", x+1);
-      if(file.substr(x+1, 4) == "http"){
-        linkList += file.substr(x+1, end);
+    if (f[x] == "\""){
+      int end = f.find("\"", x+1);
+      if(f.substr(x+1, 4) == "http"){
+        linkList += f.substr(x+1, end);
       }
     x += (end - (x+1)) + 1;
     }
