@@ -9,13 +9,13 @@ int main(){
   string fileName;
   cout << "Введите имя файла...\n";
   cin >> fileName;
-    ifstream in(fileName);
-    if (in.is_open()){
+  ifstream in(fileName);
+  if (in.is_open()){
       string line;
       while (getline(in, line)){
             file += line;
         }
-    }
+  }
   in.close();
   //cout << "Исходный файл: " << endl << file << endl;
 
@@ -34,7 +34,7 @@ int main(){
         flag = 0;
         //cout << x - 1 << endl;
         if(flagWrite){
-          linkList += " ";
+          linkList += "\n";
           flagWrite = 0;
         }
         else flagWrite = 0;
