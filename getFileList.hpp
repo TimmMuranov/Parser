@@ -1,34 +1,17 @@
-//Принимает полный путь к папке и возвращает вектор из названий всего содержимого.
 #include <string>
-#include <iostream>
 #include <filesystem>
-#include <vector>
 
-namespace fs = std::filesystem;
+// Функция для получения списка файлов в папке
+std::string fileList(const std::string& path) {
+    std::string answer;
 
-std::vector<std::string> fileList(const std::string &path) {
-    if (!fs::exists(path)) {
-        return {"Директория не найдена."};
+    // Проверяем, существует ли указанный путь и является ли он директорией
+    if (std::filesystem::exists(path) && std::filesystem::is_directory(path)) {
+        // Перебираем файлы в указанной директории
+        for (const auto& entry : std::filesystem::directory_iterator(path)) {
+            // Добавляем имя файла/каталога в результат
+            answer += entry.path().filename().string() + "\n";
+        }
     }
-    std::vector<std::string> files;
-    for (const auto &entry : fs::directory_iterator(path)) {
-        files.push_back(entry.path().u8string()); // Добавляем путь к файлу в вектор
-    }
-    return files;
+    return answer;
 }
-
-//Пример использования
-//int main() {
-//     std::string path = "path/to/dir/";
-//     std::vector<std::string> result = fileList(path);
-//
-//     if (result.size() == 1 && result[0] == "Директория не найдена.") {
-//         std::cerr << result[0] << std::endl;
-//     } else {
-//         for (const auto &file : result) {
-//             std::cout << file << std::endl;
-//         }
-//     }
-//     return 0;
-// }
-
