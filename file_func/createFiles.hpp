@@ -59,4 +59,3 @@ void createFiles(std::string input_file, std::string input_data){
         createFile(input_file, input_data);
     }
 }
-// Объединил здесь две функции (creatFile и creatDir)
