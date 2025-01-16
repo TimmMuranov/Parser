@@ -40,10 +40,7 @@ int createFile(const char* fileName, const char* data) {
 //========= Основная функция =========
 void createFiles(std::string input_file){
     for(int x=0; x<input_file.length(); ++x){
-         if(i
-         
-
-input_file[x] == '/'){
+         if(input_file[x] == '/'){
              createDir(input_file.substr(0, x));
         }
     }
