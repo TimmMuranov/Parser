@@ -3,6 +3,9 @@
 // При mode = 0 выводит тег без спецификаторов: <t> => <t>, <t1 id=1> => <t1>
 // При mode = 1 выводит закрывающую версию тега без спецификаторов: <t> => </t>, <t1 id=1> => </t1>
 #include <string>
+
+#pragma once
+
 using namespace std;
 string getTagHead(const string fullTag, bool mode){
     string tagHead = "";
@@ -21,4 +24,11 @@ string getTagHead(const string fullTag, bool mode){
     if (mode == 0) return tagHead;
     string tagHead1 = "</";
     return tagHead1 + tagHead.substr(1);
+}
+
+void getTagHead(){
+    string in;
+    cout << "Введите тег..." << endl;
+    getline(cin, in);
+    cout << getTagHead(in, 0) << endl << getTagHead(in, 1) << endl;
 }

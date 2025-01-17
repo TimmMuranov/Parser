@@ -1,7 +1,9 @@
+// Функция для получения списка файлов в папке
 #include <string>
 #include <filesystem>
 
-// Функция для получения списка файлов в папке
+#pragma once
+
 std::string fileList(const std::string& path) {
     std::string answer;
 

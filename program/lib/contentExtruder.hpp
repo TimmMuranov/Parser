@@ -3,10 +3,12 @@
 #include <fstream>
 #include <filesystem>
 
+#pragma once
+
 using namespace std;
 namespace fs = std::filesystem;
 
-int main(){
+void contentExtruder(){
     fstream f;
     string file;
     string path;

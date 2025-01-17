@@ -3,6 +3,8 @@
 #include <fstream>
 #include <filesystem>
 
+#pragma once
+
 std::string getFile (const std::string &name) {
     std::string f = "";
     std::ifstream in(name);

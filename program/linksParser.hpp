@@ -2,13 +2,15 @@
 #include <fstream>
 #include <string>
 
+#pragma once
+
 using namespace std;
 
-int main(){
+void linksParser(){
   string file;
   string fileName;
   cout << "Введите имя файла...\n";
-  cin >> fileName;
+  getline(cin, fileName);
   ifstream in(fileName);
   if (in.is_open()){
       string line;

@@ -9,14 +9,16 @@
 #include <fstream>
 #include <filesystem>
 #include <vector>
-#include "getFileList.hpp"
-#include "getFile.hpp"
+#include "lib/getFileList.hpp"
+#include "lib/getFile.hpp"
 #include "getTagHead.hpp"
 
+#pragma once 
+
 using namespace std;
-int main(){
-    string path2files = "";
-    string path2endFiles = "";
+void tagExtruder(){
+    string path2files;
+    string path2endFiles;
     cout << "Введите полный путь к папке с исходными файлами...\n";
     cin >> path2files;
     cout << "Введите полный путь к папке для сохранения обработаных файлов...\n";
