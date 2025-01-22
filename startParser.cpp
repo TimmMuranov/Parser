@@ -7,10 +7,9 @@
 using namespace std;
 
 int main(int argc, char *argv[]){
-    startWin();
     if(argc == 1){
-        cout << "Аргументы не введены" << endl;
-        cout << "Доступные команды: linksParser getTagHead" << endl;
+        startWin();
+        err(0);
         return 1;
     }
 
@@ -28,8 +27,7 @@ int main(int argc, char *argv[]){
         contentExtruder();
         return 0;
     }
-
-    cout << argv[1] << " - "<< "Команда не нейдена..." << endl;
-    cout << "Доступные команды: linksParser getTagHead contentExtruder" << endl;
-    return 1;
+    err(1);
+    err(0);
+    return 0;
 }

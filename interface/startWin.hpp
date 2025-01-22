@@ -1,4 +1,10 @@
 #include <iostream>
+using namespace std;
 void startWin(){
-    std::cout << "Welcome to parser!" <<std::endl;
+    cout <<"╔═══╗╔═══╗╔══╗╔═══╗╔══╗╔═══╗╔═══╗" << endl;
+    cout <<"║╔══╝║╔═╗║║╔╗║║╔═╗║║╔═╝║╔══╝║╔═╗║" << endl;
+    cout <<"║║╔═╗║╚═╝║║╚╝║║╚═╝║║╚═╗║╚══╗║╚═╝║" << endl;
+    cout <<"║║╚╗║║╔══╝║╔╗║║╔╗╔╝╚═╗║║╔══╝║╔╗╔╝" << endl;
+    cout <<"║╚═╝║║║   ║║║║║║║║ ╔═╝║║╚══╗║║║║ " << endl;
+    cout <<"╚═══╝╚╝   ╚╝╚╝╚╝╚╝ ╚══╝╚═══╝╚╝╚╝ " << endl;
 }
