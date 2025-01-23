@@ -1,3 +1,4 @@
+//Для работы в режиме библиотеки подключить program/headers.hpp
 #include <iostream>
 #include <cstring>
 
@@ -9,8 +10,13 @@ using namespace std;
 int main(int argc, char *argv[]){
     if(argc == 1){
         startWin();
-        err(0);
+        err(3);
         return 1;
+    }
+
+    if(strcmp(argv[1], "help") == 0) {
+        err(0);
+        return 0;
     }
 
     if(strcmp(argv[1], "linksParser") == 0) {

@@ -6,11 +6,8 @@
 
 using namespace std;
 
-void linksParser(){
+string linksParser(string fileName){
   string file;
-  string fileName;
-  cout << "Введите имя файла...\n";
-  getline(cin, fileName);
   ifstream in(fileName);
   if (in.is_open()){
       string line;
@@ -22,7 +19,7 @@ void linksParser(){
   //cout << "Исходный файл: " << endl << file << endl;
 
 /////////////////////////////////////////////////
-  cout <<"Парсинг ссылок начинается...\n";
+  //cout <<"Парсинг ссылок начинается...\n";
   string linkList = "";
   bool flag = 0;
   bool flagWrite = 0;
@@ -49,5 +46,11 @@ void linksParser(){
       }
     }
   }
-  cout << linkList;
+  return linkList;
+}
+void linksParser(){
+  cout << "Введите имя файла...\n";
+  string name;
+  getline(cin, name);
+  cout << linksParser(name);
 }
