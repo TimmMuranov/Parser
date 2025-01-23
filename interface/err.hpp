@@ -2,6 +2,7 @@
 #include <string>
 
 #include "help.h"
+
 using namespace std;
 
 void err(int errNum){
@@ -18,5 +19,8 @@ void err(int errNum){
             cout << "Аргументы не введены..." << endl;
             return;
         } 
+        case 3:{
+            cout << "'startParser help' чтобы узнать доступные команды" << endl;
+        }
     }
 }
