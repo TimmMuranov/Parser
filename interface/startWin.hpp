@@ -1,4 +1,4 @@
-//https://symbl.cc/ru/tools/text-to-symbols/
+//использовал https://symbl.cc/ru/tools/text-to-symbols/
 #include <iostream>
 using namespace std;
 void startWin(){
