@@ -19,17 +19,17 @@ int main(int argc, char *argv[]){
         return 0;
     }
 
-    if(strcmp(argv[1], "linksParser") == 0) {
+    if(strcmp(argv[1], "lp") == 0) {
         linksParser();
         return 0;
     }
 
-    if(strcmp(argv[1], "getTagHead") == 0) {
+    if(strcmp(argv[1], "gth") == 0) {
         getTagHead();
         return 0;
     }
 
-    if(strcmp(argv[1], "contentExtruder") == 0) {
+    if(strcmp(argv[1], "ce") == 0) {
         contentExtruder();
         return 0;
     }
