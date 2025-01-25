@@ -1,7 +1,18 @@
 #include <string>
 std::string help = 
-"Доступные команды: 'h' (выводит это меню)\n"
-"'lp' (linksParser), 'gth' (getTagHead), 'ce' (contentExtruder).";
+"Данная программа создана для работы с html-текстом.\n"
+"Для работы в формате библиотеки необходимо:\n"
+"-добавить исходный код в папку с проектом.\n"
+"-подключить файл 'startParser.hpp' (#include \"parser/startParser.hpp\")\n"
+"После этого можно использовать функции парсера по отдельности (находятся в program/)\n"
+"startParser -h для просмотра команд, доступных для тестирования библиотеки в консоли";
+std::string comands = 
+"Доступные команды:\n"
+"-h (help)\n"
+"-lp (linksParser)\n"
+"-gth (getTagHead)\n"
+"-ce (contentExtruder)\n"
+"Прибавить -h для помощи по команде.";
 
 std::string help_lp = 
 "linksParser принимает имя текстового документа.\n"

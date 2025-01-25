@@ -7,7 +7,7 @@ using namespace std;
 void err(int errNum){
     switch(errNum){
         case 0:{
-            cout << help << endl;
+            cout << comands << endl;
             return;
         }
         case 1:{
@@ -19,7 +19,12 @@ void err(int errNum){
             return;
         } 
         case 3:{
-            cout << "'startParser help' чтобы узнать доступные команды" << endl;
+            cout << "'startParser -h' чтобы узнать доступные команды" << endl;
+            return;
+        }
+        case 4:{
+            cout << help << endl;
+            return;
         }
     }
 }

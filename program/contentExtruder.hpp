@@ -1,9 +1,3 @@
-#include <iostream>
-#include <string>
-
-#pragma once
-
-using namespace std;
 // принимает текст, стартовый тег со всеми спецификаторами и его тип (пустой вариант)
 //
 //#include "contentExtruder.hpp"
@@ -13,6 +7,12 @@ using namespace std;
 //    // выход: "12<1></1>3"
 //    return 0;
 //}
+#include <iostream>
+#include <string>
+
+#pragma once
+
+using namespace std;
 
 string contentExtruder(string file, string startTag, string openTag){
     string closeTag = "</" + openTag.substr(1);
