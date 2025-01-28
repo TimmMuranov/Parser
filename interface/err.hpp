@@ -19,10 +19,12 @@ void err(int errNum){
             return;
         } 
         case 3:{
-            cout << "'startParser -h' чтобы узнать доступные команды" << endl;
+            cout << "'startParser -h' для получения информации" << endl;
+            cout << "'startParser -c' для просмотра комманд консоли" << endl;
             return;
         }
         case 4:{
+            startWin();
             cout << help << endl;
             return;
         }

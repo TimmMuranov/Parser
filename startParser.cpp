@@ -10,12 +10,17 @@ using namespace std;
 int main(int argc, char *argv[]){
     if(argc == 1){
         startWin();
-        err(4);
+        err(3);
         return 1;
     }
 
-    if(strcmp(argv[1], "-h") == 0) {
+    if(strcmp(argv[1], "-c") == 0) {
         err(0);
+        return 0;
+    }
+
+    if(strcmp(argv[1], "-h") == 0) {
+        err(4);
         return 0;
     }
 
@@ -34,6 +39,5 @@ int main(int argc, char *argv[]){
         return 0;
     }
     err(1);
-    err(0);
     return 0;
 }
