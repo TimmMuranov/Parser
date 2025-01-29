@@ -38,6 +38,11 @@ int main(int argc, char *argv[]){
         contentExtruder();
         return 0;
     }
+
+    if(strcmp(argv[1], "-che") == 0) {
+        chngExtention();
+        return 0;
+    }
     err(1);
     return 0;
 }
