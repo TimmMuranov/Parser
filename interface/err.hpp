@@ -29,3 +29,21 @@ void err(int errNum){
         }
     }
 }
+
+void err(string in){
+    if (in == "-h"){
+        cout << help_h << endl;
+    } else if (in == "-c"){
+        cout << help_c << endl;
+    } else if (in == "-lp"){
+        cout << help_lp << endl;
+    } else if (in == "-gth"){
+        cout << help_gth << endl;
+    } else if (in == "-ce"){
+        cout << help_ce << endl;
+    } else if (in == "-che"){
+        cout << help_che << endl;
+    } else {
+        cout << "По команде " << in << " нет результатов...\n";
+    }
+}

@@ -15,13 +15,9 @@ int main(int argc, char *argv[]){
     }
 
     if(argc == 3){
-        if(strcmp(argv[2], "-h"){
-            switch(argv[1]){
-                case "-lp":;
-                case "-gth":;
-                case "-ce":;
-                case "-che":;
-            }
+        if(strcmp(argv[2], "-h") == 0){
+            err(argv[1]);
+            return 0;
         }
     }
 

@@ -9,11 +9,16 @@ std::string help =
 std::string comands = 
 "Доступные команды:\n"
 "-h (help)\n"
+"-c (commands)\n"
 "-lp (linksParser)\n"
 "-gth (getTagHead)\n"
 "-ce (contentExtruder)\n"
 "-che (chngExtantion)\n"
 "Прибавить -h для помощи по команде.";
+
+std::string help_h = "Отображает помошь по программе.";
+
+std::string help_c = "Отображает список доступлых комманд.";
 
 std::string help_lp = 
 "linksParser принимает имя текстового документа.\n"
@@ -27,7 +32,7 @@ std::string help_ce =
 "('...<a>txt</a>...<a id=1>txt1</a>...', <a id=1>, <a> ---> 'txt1')";
 
 std::string help_che =
-"chngExtention принимает имя и новок расширение. Возвращает имя с новым расширением или меняет старое расширение на новое.\n"
+"chngExtention принимает имя и новое расширение. Возвращает имя с новым расширением или меняет старое расширение на новое.\n"
 "(name.txt, word ---> name.word, name, .txt ---> name.txt)"; 
 
 //для меня: если возникла ошибка при отправке комита без имени - "git pull --no-rebase" в консоль
