@@ -12,6 +12,7 @@ std::string comands =
 "-lp (linksParser)\n"
 "-gth (getTagHead)\n"
 "-ce (contentExtruder)\n"
+"-che (chngExtantion)\n"
 "Прибавить -h для помощи по команде.";
 
 std::string help_lp = 
@@ -24,5 +25,9 @@ std::string help_gth =
 std::string help_ce = 
 "contentExtruder принимает текст, стартовый тег со спецификаторами и его тип (пустой вариант тега)\n"
 "('...<a>txt</a>...<a id=1>txt1</a>...', <a id=1>, <a> ---> 'txt1')";
+
+std::string help_che =
+"chngExtention принимает имя и новок расширение. Возвращает имя с новым расширением или меняет старое расширение на новое.\n"
+"(name.txt, word ---> name.word, name, .txt ---> name.txt)"; 
 
 //для меня: если возникла ошибка при отправке комита без имени - "git pull --no-rebase" в консоль
