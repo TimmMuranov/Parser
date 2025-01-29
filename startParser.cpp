@@ -14,6 +14,17 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
+    if(argc == 3){
+        if(strcmp(argv[2], "-h"){
+            switch(argv[1]){
+                case "-lp":;
+                case "-gth":;
+                case "-ce":;
+                case "-che":;
+            }
+        }
+    }
+
     if(strcmp(argv[1], "-c") == 0) {
         err(0);
         return 0;
