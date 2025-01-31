@@ -8,6 +8,8 @@
 </ul>
 </p>
 <hr />
+<p>Для начала надо скачать проект:</p>
+<pre>git clone https://github.com/TimmMuranov/Parser</pre>
 <p>Для работы в формате библиотеки нужно подключить в проект файл <code>starsParser.hpp</code>:
 <p>
   <pre><code>#include "Parser/startParser.hpp</code></pre>
@@ -17,7 +19,7 @@
 <hr />
 <p>Для запуска утилиты необходимо скомпилировать файл <code>startParser.cpp</code>.</p>
 <p>Компилировать можно, например, с помощью компилятора g++:</p>
-<pre>git clone https://github.com/TimmMuranov/Parser
+<pre>
 cd ./Parser
 g++ startParser.cpp -o startParser
 ./startParser
