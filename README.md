@@ -17,7 +17,8 @@
 <hr />
 <p>Для запуска утилиты необходимо скомпилировать файл <code>startParser.cpp</code>.</p>
 <p>Компилировать можно, например, с помощью компилятора g++:</p>
-<pre>cd ./Parser
+<pre>git clone https://github.com/TimmMuranov/Parser
+cd ./Parser
 g++ startParser.cpp -o startParser
 ./startParser
 </pre>
