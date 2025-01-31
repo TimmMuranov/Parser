@@ -4,3 +4,4 @@
 #include "getTagHead.hpp"
 #include "contentExtruder.hpp"
 #include "chngExtention.hpp"
+#include "tagRemove.hpp"

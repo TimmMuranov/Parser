@@ -50,6 +50,12 @@ int main(int argc, char *argv[]){
         chngExtention();
         return 0;
     }
+
+    if(strcmp(argv[1], "-tr") == 0) {
+        tagRemove();
+        return 0;
+    }
+
     err(1);
     return 0;
 }
